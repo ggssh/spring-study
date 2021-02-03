@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    <bean id="user" class="com.ggssh.pojo.User">-->
+    <!--        <constructor-arg index="0" value="312"/>-->
+    <!--    </bean>-->
+    <!--不建议使用-->
+    <!--    <bean id="user" class="com.ggssh.pojo.User">-->
+    <!--        <constructor-arg type="int" value="312"/>-->
+    <!--    </bean>-->
+
+    <bean id="user" class="com.ggssh.pojo.User">
+        <constructor-arg name="name" value="ggssh"/>
+    </bean>
+
+    <alias name="user" alias="userNew"/>
+    <!--
+    id : Bean的唯一标识符，也就是相当于对象名
+    class : Bean对象所对应的全限定名 : 包名 + 类型
+    name : 也是别名，而且name可以同时取多个别名
+    -->
+</beans>

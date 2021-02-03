@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.ggssh.pojo.Address">
+        <property name="address" value="北京"/>
+    </bean>
+
+    <bean id="student" class="com.ggssh.pojo.Student">
+        <!--第一种 普通值注入-->
+        <property name="name" value="xiaoming"/>
+        <!--第二种 Bean注入 ref-->
+        <property name="address" ref="address"/>
+        <!--数组注入-->
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>三国演义</value>
+                <value>水浒传</value>
+                <value>西游记</value>
+            </array>
+        </property>
+        <!--list-->
+        <property name="hobbys">
+            <list>
+                <value>看电影</value>
+                <value>吃东西</value>
+            </list>
+        </property>
+        <!--map-->
+        <property name="card">
+            <map>
+                <entry key="银行卡" value="1"/>
+                <entry key="身份证" value="2"/>
+            </map>
+        </property>
+        <!--set-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>CS</value>
+            </set>
+        </property>
+        <!--null-->
+        <property name="wife">
+            <null/>
+        </property>
+        <!--properties-->
+        <property name="info">
+            <props>
+                <prop key="学号">20194323</prop>
+                <prop key="姓名">ggssh</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
